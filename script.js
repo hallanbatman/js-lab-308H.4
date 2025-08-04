@@ -56,12 +56,12 @@ for (let i = 0; i < csv.length; i++) {
             cells.cell4 += char;
         }
     }
-}
 
-// Log the last line (if no \n at the end)
-// if (cell1 || cell2 || cell3 || cell4) {
-//     console.log(cell1, cell2, cell3, cell4);
-// }
+    // If last char in string print final cells
+      if (csv.length - 1 == i) {
+    console.log(cells);
+  }
+}
 
 // Store each “cell” of data in a variable.
 // When you encounter a comma, move to the next cell.
