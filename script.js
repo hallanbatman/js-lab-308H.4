@@ -1,11 +1,28 @@
+// #### R-ALAB 308.4.1: | Working with Data Collections ####
+
+// ✅ # Part 1: Refactoring Old Code #
+
+// Part 2: Expanding Functionality #
+
+// Tasks:
+// Declare a variable that stores the number of columns in each row of data within the CSV.
+// Instead of hard-coding four columns per row, expand your code to accept any number of columns. This should be calculated dynamically based on the first row of data.
+
+// const columns = {
+// 	ID: "",
+// 	Name: "",
+// 	Occupation: "",
+//     Age: "",
+// }
+
+let table = [
+    rows = [r1, r2 , r3, r4],
+    collumns = [c1, c2 , c3 , c4],
+]
+
 //CSV data:
 //ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26
 let csv = `ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26`;
-
-// let cell1 = "";
-// let cell2 = "";
-// let cell3 = "";
-// let cell4 = "";
 
 // Refactoring individual variables for each cell, into creating an array of cells.
 const cells = {
@@ -35,7 +52,7 @@ for (let i = 0; i < csv.length; i++) {
 
     //if new line, print the row and reset
     else if (char === "\n") {
-        //console.log(`found line`);
+        console.log(`found line`);
         console.log(cells);
         currentCell = 0;
         cells.cell1 = "";
@@ -63,13 +80,15 @@ for (let i = 0; i < csv.length; i++) {
   }
 }
 
+
+
+// #### Old Code Promtp | 308H.3 ####
 // Store each “cell” of data in a variable.
 // When you encounter a comma, move to the next cell.
 // When you encounter the “\r\n” sequence, move to the next “row.”
 // Log each row of data.
 // You do not need to format the data, the following works well.
 // // console.log(cell1, cell2, cell3, cell4);
-
 // assumptions:
 // There will only be 4 cells per row.
 // There will be no escaped characters other than “\n”.
